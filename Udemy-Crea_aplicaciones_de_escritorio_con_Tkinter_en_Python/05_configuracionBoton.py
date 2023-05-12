@@ -7,6 +7,8 @@ alto=400
 tamaño=str(ancho)+"x"+str(alto)
 ventana.geometry(tamaño)
 
+
+
 ventana.title('Titulo de la ventana')
 
 ventana.rowconfigure(0,weight=2)
