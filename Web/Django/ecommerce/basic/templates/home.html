@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <title>Home</title>
+</head>
+<body>
+   <div class="container">
+     <h1>Bienvenido</h1>
+
+     <p>Esta es una pagina de prueba que simula el inicio, el cual es capaz
+     de redirigir al usuario a travez de uyn boton a otra pagina destinada a
+   listar a todos los usuarios</p>
+
+   <a  href="{% url 'usuarios:listarUsuarios' %}" class="btn btn-primary"  >Usuarios</a>
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <title>Listar usuarios</title>
+</head>
+<body>
+  <div class="container">
+
+    <a  style="width:20%;margin-top:20px" href="{% url 'inicio' %}" class="btn btn-primary"  >Inicio</a>
+
+    <h2 class="text-center mt-5">Lista de usuarios</h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Codigo</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Profesion</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Ciudad</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for u in consulta %}
+        <tr>
+          <th scope="row">{{u.codigo}}</th>
+          <td><img src="{{u.foto.url}}" width="40" height="40" style="border-radius:50px"></td>
+          <td>{{u.nombre}}</td>
+          <td>{{u.profesion}}</td>
+          <td>{{u.genero}}</td>
+          <td>{{u.ciudad}}</td>
+        </tr>
+       {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
